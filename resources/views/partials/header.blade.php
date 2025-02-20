@@ -31,7 +31,7 @@
                 </li>
                 <li><a class="nav-link scrollto" href="/umkm">UMKM</a></li>
                 <li><a class="nav-link scrollto" href="/layanan">Layanan</a></li>
-                <li><a class="nav-link scrollto" href="/kontak">Kontak kami</a></li>
+                <li><a class="nav-link scrollto" href="/kontak">Kontak Kami</a></li>
                 <li>
                     <a href="/login" class="nav-link scrollto">Masuk</a>
                 </li>

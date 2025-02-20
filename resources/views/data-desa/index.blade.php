@@ -3,54 +3,23 @@
 @section('content')
 <section class="counts section-bg">
     <div class="container">
+        <div class="section-title">
+            <h2>Data Kependudukan</h2>
+        </div>
 
+        <hr>
       <div class="row my-4">
         <div class="section-title">
-            <h2>Data Agama</h2>
+            <h2>Data Penduduk</h2>
         </div>
-        <div class="col-lg-4">
+        <div>
             <div class="card">
                 <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead class="table-primary">
-                                <tr>
-                                    <th scope="col">Agama</th>
-                                    <th scope="col">Penganut</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($dataAgamas as $agama)
-                                <tr>
-                                    <td>{{ $agama->agama }}</td>
-                                    <td>{{ $agama->penganut }}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                            <tfoot class="table-warning">
-                                <tr>
-                                    <td>Total </td>
-                                    <td>{{ $totalPenganut }}</td>
-                                </tr>
-                            </tfoot>
-                        </table>
-                    </div>                    
+                    <h5 style="text-align: center;">Cangkring memiliki penduduk sebanyak <b>{{ $jumlahTotal }}</b> orang.</h5>
                 </div>
             </div>
         </div>
-    
-        <div class="col-lg-8">
-            <div class="card">
-                <div class="card-body">
-                    <div>
-                        <canvas id="agamaChart"></canvas>
-                    </div>                          
-                </div>
-            </div>
-        </div>
-      </div>
-    
-      <hr>
+    </div>
 
       <div class="row my-4">
         <div class="section-title">
@@ -98,7 +67,51 @@
         </div>
       </div>
 
-      <hr>
+      <div class="row my-4">
+        <div class="section-title">
+            <h2>Data Agama</h2>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th scope="col">Agama</th>
+                                    <th scope="col">Penganut</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($dataAgamas as $agama)
+                                <tr>
+                                    <td>{{ $agama->agama }}</td>
+                                    <td>{{ $agama->penganut }}</td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                            <tfoot class="table-warning">
+                                <tr>
+                                    <td>Total </td>
+                                    <td>{{ $totalPenganut }}</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <canvas id="agamaChart"></canvas>
+                    </div>                          
+                </div>
+            </div>
+        </div>
+      </div>
 
       <div class="row my-4">
         <div class="section-title">
@@ -112,7 +125,7 @@
                             <thead class="table-primary">
                                 <tr>
                                     <th scope="col">Pekerjaan</th>
-                                    <th scope="col">jumlah</th>
+                                    <th scope="col">Jumlah</th>
                                 </tr>
                             </thead>
                             <tbody>
