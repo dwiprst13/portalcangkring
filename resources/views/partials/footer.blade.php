@@ -1,7 +1,6 @@
 <!-- I left my sign in here -->
 <!-- dwiprast13 -->
 <!-- ewwwwwwww -->
- 
 <!-- ======= Footer ======= -->
 <footer id="footer">
     <div class="footer-top">
@@ -47,7 +46,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>2025</span></strong>. || Repost By : <a href="https://www.youtube.com/@kaseps8304/videos">Kasep_Code</a>
+        &copy; Copyright <strong><span>2025</span></strong>. || By : <a href="">KKN-T UAA 2025</a>
       </div>
     </div>
   </footer><!-- End Footer -->
