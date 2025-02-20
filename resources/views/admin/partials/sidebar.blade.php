@@ -186,7 +186,7 @@
                                 <span>
                                     <i class="ti ti-point"></i>
                                 </span>
-                                <span class="hide-menu">Umkm Desa</span>
+                                <span class="hide-menu">UMKM Desa</span>
                             </a>
                         </li>
 
@@ -204,7 +204,7 @@
                                 <span>
                                     <i class="ti ti-point"></i>
                                 </span>
-                                <span class="hide-menu">Gallery</span>
+                                <span class="hide-menu">Galeri</span>
                             </a>
                         </li>
 
