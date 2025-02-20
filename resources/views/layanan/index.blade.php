@@ -3,7 +3,7 @@
 @section('content')
     <section class="counts section-bg">
         <div class="section-title">
-            <h2>layanan</h2>
+            <h2>Layanan</h2>
         </div>
         <div class="container">
             <div class="row">

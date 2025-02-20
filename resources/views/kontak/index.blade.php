@@ -21,7 +21,7 @@
                 </div>
       
                 <div class="col-lg-6" data-aos="fade-up">
-                  <div class="info-box" style="height: 250px;"> <!-- Ubah tinggi sesuai kebutuhan -->
+                  <div class="info-box" style="height: 250px;"> 
                     <div class="mx-auto pt-4">
                       <i class="bx bx-envelope"></i>
                       <h3>Email Kami</h3>
@@ -29,7 +29,7 @@
                     </div>
                   </div>
 
-                  <div class="info-box" style="height: 250px;"> <!-- Ubah tinggi sesuai kebutuhan -->
+                  <div class="info-box" style="height: 250px;"> 
                     <div class="mx-auto pt-4">
                       <i class="bx bx-phone-call"></i>
                       <h3>Nomor HP Kami</h3>

@@ -55,11 +55,12 @@
                     <div class="card-body">
                         <div class="mb-3">
                             <img src="" class="img-preview img-fluid mb-3 mt-2" id="preview" style="border-radius: 5px; max-height:300px; overflow:hidden;"><br>
-                            <label for="gambar" class="form-label">Gambar Slider <span style="color: red">*</span></label>
+                            <label for="gambar" class="form-label">Gambar<span style="color: red">*</span></label>
                             <input class="form-control" type="file" id="gambar" name="gambar" onchange="previewImage()">
                             @error('gambar')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
+                            <i>Disarankan gambar 4:3 dengan ukuran maksimal 2 MB</i>
                         </div>
                         <div class="mb-3">
                             <label for="kategori" class="form-label">Kategori Berita <span style="color: red">*</span></label>

@@ -7,7 +7,7 @@
         <div class="card-header bg-primary">
             <div class="row align-items-center">
                 <div class="col-6">
-                    <h5 class="card-title fw-semibold text-white">Data Penduduk</h5>
+                    <h5 class="card-title fw-semibold text-white">Data Agama</h5>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Agama</th>
+                                <th>Jenis Kelamin</th>
                                 <th>Jumlah Penganut</th>
                                 <th>Perbarui Data</th>
                             </tr>
