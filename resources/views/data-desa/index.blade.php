@@ -20,7 +20,53 @@
             </div>
         </div>
     </div>
-
+    
+      <div class="row my-4">
+        <div class="section-title">
+            <h2>Data Jumlah Warga Per Rt</h2>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th scope="col">Nama Rt</th>
+                                    <th scope="col">Jumlah</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($penrts as $penrt)
+                                    <tr>
+                                        <td>{{ $penrt->rt }}</td> <!-- Gunakan variabel perulangan yang benar -->
+                                        <td>{{ $penrt->jumlah }}</td> <!-- Pastikan kolom 'jumlah' ada dalam database -->
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                            <tfoot class="table-warning">
+                                <tr>
+                                    <td>Total </td>
+                                    <td>{{ $totalPenRt}}</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <canvas id="penRtChart" style="height: 400px; overflow: auto;"></canvas>
+                    </div>                          
+                </div>
+            </div>
+        </div>
+      </div>
+    
       <div class="row my-4">
         <div class="section-title">
             <h2>Data Jenis Kelamin</h2>
@@ -112,7 +158,6 @@
             </div>
         </div>
       </div>
-
       <div class="row my-4">
         <div class="section-title">
             <h2>Data Pekerjaan</h2>
@@ -152,17 +197,41 @@
             <div class="card">
                 <div class="card-body">
                     <div>
-                        <canvas id="pekerjaanChart" style="max-height: 400px; overflow: auto;"></canvas>
+                        <canvas id="pekerjaanChart" style="max-height: 350px; overflow: auto;"></canvas>
                     </div>                          
                 </div>
             </div>
         </div>
       </div>
-    
-      
     </div>
   </section>
-  
+
+  <script>
+    const ctxPekerjaan = document.getElementById('pekerjaanChart');
+    
+    const labelPekerjaan  = {!! $labelPekerjaan !!};
+    const dataPekerjaan   = {!! $jumlahPekerjaan !!};
+
+    new Chart(ctxPekerjaan, {
+        type: 'polarArea',
+        data: {
+            labels: labelPekerjaan,
+            datasets: [{
+                label: 'Jumlah Pekerjaan',
+                data: dataPekerjaan,
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(75, 192, 192)',
+                    'rgb(255, 205, 86)',
+                    'rgb(201, 203, 207)',
+                    'rgb(54, 162, 235)'
+                ],
+                hoverOffset: 4
+            }]
+        }
+    });
+</script>
+
 
   <script>
     const ctxAgama = document.getElementById('agamaChart');
@@ -231,30 +300,43 @@
 </script>
 
 <script>
-    const ctxPekerjaan = document.getElementById('pekerjaanChart');
-    
-    const labelPekerjaan  = {!! $labelPekerjaan !!};
-    const dataPekerjaan   = {!! $jumlahPekerjaan !!};
+    document.addEventListener("DOMContentLoaded", function () {
+        const ctxPenRt = document.getElementById('penRtChart').getContext('2d');
 
-    new Chart(ctxPekerjaan, {
-        type: 'polarArea',
-        data: {
-            labels: labelPekerjaan,
-            datasets: [{
-                label: 'Jumlah Pekerjaan',
-                data: dataPekerjaan,
-                backgroundColor: [
-                    'rgb(255, 99, 132)',
-                    'rgb(75, 192, 192)',
-                    'rgb(255, 205, 86)',
-                    'rgb(201, 203, 207)',
-                    'rgb(54, 162, 235)'
-                ],
-                hoverOffset: 4
-            }]
-        }
+        const labelPenRt = @json($labelPenRt);
+        const dataPenRt = @json($jumlahPenRt);
+
+        new Chart(ctxPenRt, {
+            type: 'bar',
+            data: {
+                labels: labelPenRt,
+                datasets: [{
+                    label: 'Jumlah Penduduk Per RT',
+                    data: dataPenRt,
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(75, 192, 192)',
+                        'rgb(255, 205, 86)',
+                        'rgb(201, 203, 207)',
+                        'rgb(54, 162, 235)'
+                    ],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
     });
 </script>
 
+
   
 @endsection
+

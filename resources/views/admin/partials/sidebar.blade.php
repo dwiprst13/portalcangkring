@@ -147,6 +147,14 @@
                     </a>
                     <ul aria-expanded="false" class="collapse first-level">
                         <li class="sidebar-item">
+                            <a class="sidebar-link" href="/admin/penrt" aria-expanded="false">
+                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                    <i class="ti ti-point"></i>
+                                </div>
+                                <span class="hide-menu">Jumlah Penduduk</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
                             <a class="sidebar-link" href="/admin/agama" aria-expanded="false">
                                 <div class="round-16 d-flex align-items-center justify-content-center">
                                     <i class="ti ti-point"></i>

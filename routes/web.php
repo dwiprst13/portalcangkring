@@ -36,6 +36,7 @@ use App\Http\Controllers\AdminKategoriController;
 use App\Http\Controllers\AdminVisiMisiController;
 use App\Http\Controllers\PerangkatDesaController;
 use App\Http\Controllers\AdminPekerjaanController;
+use App\Http\Controllers\AdminPenRtController;
 use App\Http\Controllers\AdminAnnouncementController;
 use App\Http\Controllers\AdminJenisKelaminController;
 use App\Http\Controllers\AdminVideoProfileController;
@@ -128,6 +129,9 @@ Route::resource('admin/agama', AdminAgamaController::class);
 Route::resource('admin/jenis-kelamin', AdminJenisKelaminController::class);
 
 Route::resource('admin/pekerjaan', AdminPekerjaanController::class);
+
+Route::resource('admin/penrt', AdminPenRtController::class);
+// Route::resource('admin/penrt', AdminAgamaController::class);
 
 Route::get('/admin/umkm/slug', [AdminUmkmController::class, 'slug']);
 Route::resource('admin/umkm', AdminUmkmController::class);

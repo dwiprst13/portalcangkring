@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Agama;
 use App\Models\Pekerjaan;
+use App\Models\PenRt;
 use App\Models\JenisKelamin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -27,6 +28,11 @@ class DataDesaController extends Controller
         $labelsPekerjaan     = $dataPekerjaans->pluck('pekerjaan')->toArray();
         $jumlahPekerjaan     = $dataPekerjaans->pluck('jumlah')->toArray();
 
+        $dataPenRts          = PenRt::all();
+        $total_penrt         = $dataPenRts->sum('jumlah');
+        $labelsPenRt         = $dataPenRts->pluck('rt')->toArray();
+        $jumlahPenRt         = $dataPenRts->pluck('jumlah')->toArray();
+
         return view('data-desa.index', [
             'dataAgamas'        => $dataAgamas,
             'labels'            => json_encode($labels),
@@ -41,7 +47,12 @@ class DataDesaController extends Controller
             'pekerjaans'        => $dataPekerjaans,
             'totalPekerjaan'    => $total_pekerjaan,
             'labelPekerjaan'    => json_encode($labelsPekerjaan),
-            'jumlahPekerjaan'   => json_encode($jumlahPekerjaan)
+            'jumlahPekerjaan'   => json_encode($jumlahPekerjaan),
+
+            'penrts'         => $dataPenRts,
+            'totalPenRt'    => $total_penrt,
+            'labelPenRt'    => $labelsPenRt,
+            'jumlahPenRt'   => $jumlahPenRt
         ]);
     }
 }

@@ -475,7 +475,7 @@ h6,
   letter-spacing: 1px;
   display: inline-block;
   padding: 12px 32px;
-  border-radius: 5px;
+  border-radius: 25px;
   transition: 0.5s;
   line-height: 1;
   margin: 10px;
@@ -812,6 +812,12 @@ section {
   border-radius: 20px; /* Menghapus sudut bulat */
 }
 
+.card:hover {
+  box-shadow: 0px 0 16px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan */
+  scale: 1.01;
+  animation: scale 0.5s;
+}
+
 .card-img-top {
   max-width: 100%;
   max-height: 200px;
@@ -820,8 +826,15 @@ section {
 
 .card-title {
   font-size: bold;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
+.news-date {
+  font-size: 0.875rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
 .card-text {
   font-size: 0.875rem;
   overflow: hidden;
@@ -852,7 +865,7 @@ section {
   background: #fff;
   border-radius: 50%;
   transition: 0.5s;
-  color: #428bca;
+  color: #243134;
   box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
@@ -863,7 +876,7 @@ section {
 }
 
 .services .icon-box:hover .icon {
-  box-shadow: 0px 0 30px rgba(66, 139, 202, 0.5);
+  box-shadow: 0px 0 30px rgba(46, 61, 73, 0.5);
 }
 
 .services .title {
@@ -875,12 +888,12 @@ section {
 }
 
 .services .title a {
-  color: #444;
+  color: #243134;
   transition: 0.3s;
 }
 
 .services .title a:hover {
-  color: #428bca;
+  color: #243134;
 }
 
 .services .title::after {
@@ -889,7 +902,7 @@ section {
   display: block;
   width: 50px;
   height: 2px;
-  background: #428bca;
+  background: #243134;
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -897,280 +910,6 @@ section {
 .services .description {
   line-height: 24px;
   font-size: 14px;
-}
-
-/*--------------------------------------------------------------
-# Our Team
---------------------------------------------------------------*/
- .member {
-  text-align: center;
-  margin-bottom: 80px;
-  position: relative;
-}
- .member .pic {
-  border-radius: 4px;
-  overflow: hidden;
-}
- .member img {
-  transition: all ease-in-out 0.4s;
-}
- .member:hover img {
-  transform: scale(1.1);
-}
- .member .member-info {
-  position: absolute;
-  bottom: -48px;
-  left: 20px;
-  right: 20px;
-  background: linear-gradient(360deg, rgb(92, 118, 141) 0%, rgba(92, 118, 141, 0.9) 35%, rgba(140, 167, 191, 0.8) 100%);
-  padding: 15px 0;
-  border-radius: 4px;
-}
- .member h4 {
-  font-weight: 700;
-  margin-bottom: 10px;
-  font-size: 16px;
-  color: #fff;
-  position: relative;
-  padding-bottom: 10px;
-}
- .member h4::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 1px;
-  background: #fff;
-  bottom: 0;
-  left: calc(50% - 25px);
-}
- .member span {
-  font-style: italic;
-  display: block;
-  font-size: 13px;
-  color: #fff;
-}
- .member .social {
-  margin-top: 15px;
-}
- .member .social a {
-  transition: color 0.3s;
-  color: #fff;
-}
- .member .social a:hover {
-  color: #9eccf4;
-}
- .member .social i {
-  font-size: 16px;
-  margin: 0 2px;
-}
-
-@media (max-width: 992px) {
- .member {
-    margin-bottom: 100px;
-  }
-}
-
-/*--------------------------------------------------------------
-# Our Portfolio
---------------------------------------------------------------*/
-.portfolio .portfolio-item {
-  margin-bottom: 30px;
-}
-
-.portfolio #portfolio-flters {
-  padding: 0;
-  margin: 0 0 35px 0;
-  list-style: none;
-  text-align: center;
-}
-
-.portfolio #portfolio-flters li {
-  cursor: pointer;
-  margin: 0 15px 15px 0;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 12px;
-  line-height: 20px;
-  color: #444;
-  border-radius: 4px;
-  text-transform: uppercase;
-  background: #fff;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
-  background: #428bca;
-  color: #fff;
-}
-
-.portfolio #portfolio-flters li:last-child {
-  margin-right: 0;
-}
-
-.portfolio .portfolio-wrap {
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-}
-
-.portfolio .portfolio-wrap img {
-  transition: 0.3s;
-}
-
-.portfolio .portfolio-wrap .portfolio-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: 0.3s;
-  text-align: center;
-  background: rgba(31, 53, 72, 0.6);
-  padding-bottom: 30px;
-}
-
-.portfolio .portfolio-wrap .portfolio-info h4 {
-  font-size: 20px;
-  color: #fff;
-  font-weight: 600;
-}
-
-.portfolio .portfolio-wrap .portfolio-info p {
-  color: #fff;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-
-.portfolio .portfolio-wrap .portfolio-info a {
-  color: #428bca;
-  margin: 0 4px;
-  line-height: 0;
-  background-color: #fff;
-  border-radius: 50px;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-}
-
-.portfolio .portfolio-wrap .portfolio-info a i {
-  font-size: 22px;
-  line-height: 0;
-}
-
-.portfolio .portfolio-wrap .portfolio-info a:hover {
-  background: #428bca;
-  color: #fff;
-}
-
-.portfolio .portfolio-wrap:hover {
-  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
-}
-
-.portfolio .portfolio-wrap:hover .portfolio-info {
-  opacity: 1;
-  padding-bottom: 0;
-}
-
-.portfolio .portfolio-wrap:hover img {
-  transform: scale(1.1);
-}
-
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-  padding-top: 40px;
-}
-
-.portfolio-details .portfolio-details-slider img {
-  width: 100%;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #428bca;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #428bca;
-}
-
-.portfolio-details .portfolio-info {
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(31, 53, 72, 0.08);
-}
-
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.portfolio-details .portfolio-info ul li+li {
-  margin-top: 10px;
-}
-
-.portfolio-details .portfolio-description {
-  padding-top: 30px;
-}
-
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-description p {
-  padding: 0;
-}
-
-
-/*--------------------------------------------------------------
-# Frequently Asked Questions
---------------------------------------------------------------*/
-.faq {
-  padding-bottom: 30px;
-}
-
-.faq .faq-item {
-  margin-bottom: 40px;
-}
-
-.faq .faq-item h4 {
-  font-size: 20px;
-  line-height: 28px;
-  font-weight: 600;
-  margin-bottom: 15px;
-  color: #1f3548;
 }
 
 /*--------------------------------------------------------------

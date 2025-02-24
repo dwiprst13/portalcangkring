@@ -10,7 +10,7 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
   <meta name="author" content="Dwi Prasetia">
-
+  <meta property="og:url" content="https://github.com/dwiprast13">
   
   <!-- Favicons -->
   <link href="/assets/img/favicon.png" rel="icon">

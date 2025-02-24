@@ -7,29 +7,28 @@
         <div class="card-header bg-primary">
             <div class="row align-items-center">
                 <div class="col-6">
-                    <h5 class="card-title fw-semibold text-white">Edit Data Agama</h5>
+                    <h5 class="card-title fw-semibold text-white">Tambah Data Jumlah Warga Per-RT</h5>
                 </div>
                 <div class="col-6 text-right">
-                    <a href="/admin/agama" type="button" class="btn btn-warning float-end">Kembali</a>
+                    <a href="/admin/penrt" type="button" class="btn btn-warning float-end">Kembali</a>
                 </div>
             </div>
         </div>
         
         <div class="card-body">
-            <form method="POST" action="/admin/agama/{{ $agama->id }}">
-                @method('put')
+            <form method="POST" action="/admin/penrt">
                 @csrf
                 <div class="mb-3">
-                    <label for="agama" class="form-label">Nama Agama</label>
-                    <input type="text" class="form-control" name="agama" id="agama" readonly value="{{ old('agama', $agama->agama) }}">
-                    @error('agama')
+                    <label for="penrt" class="form-label">Nama penrt <span style="color: red">*</span></label>
+                    <input type="text" class="form-control" name="penrt" id="penrt" value="{{ old('penrt') }}">
+                    @error('penrt')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="penganut" class="form-label">Jumlah Penganut <span style="color: red">*</span></label>
-                    <input type="number" class="form-control" name="penganut" id="penganut" value="{{ old('penganut', $agama->penganut) }}">
-                    @error('penganut')
+                    <label for="jumlah" class="form-label">Jumlah<span style="color: red">*</span></label>
+                    <input type="number" class="form-control" name="jumlah" id="jumlah" value="{{ old('jumlah') }}">
+                    @error('jumlah')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </div>

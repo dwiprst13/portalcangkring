@@ -42,7 +42,7 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Judul</th>
-                                        <th>Excerpt</th>
+                                        <th>Isi</th>
                                         <th>Penulis</th>
                                         <th>Status</th>
                                         <th>Aksi</th>
@@ -87,7 +87,7 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Judul</th>
-                                        <th>Excerpt</th>
+                                        <th>Isi</th>
                                         <th>Penulis</th>
                                         <th>Status</th>
                                         <th>Aksi</th>

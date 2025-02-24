@@ -20,8 +20,8 @@
                 @method('put')
                 @csrf
                 <div class="mb-3">
-                    <label for="jenis_kelamin" class="form-label">Jenis Kelamin <span style="color: red">*</span></label>
-                    <input type="text" class="form-control" name="jenis_kelamin" id="jenis_kelamin" value="{{ old('jenis_kelamin', $jenisKelamin->jenis_kelamin) }}">
+                    <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
+                    <input type="text" class="form-control" readonly name="jenis_kelamin" id="jenis_kelamin" value="{{ old('jenis_kelamin', $jenisKelamin->jenis_kelamin) }}">
                     @error('jenis_kelamin')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
