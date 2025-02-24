@@ -493,6 +493,11 @@ h6,
   #hero h2 {
     font-size: 28px;
   }
+
+  #hero .carousel-control-prev,
+  #hero .carousel-control-next {
+    display: none;
+  }
 }
 
 @media (max-height: 500px) {
