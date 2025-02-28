@@ -1,6 +1,4 @@
 /*
-Template Name: Admin Template
-Author: Wrappixel
 
 File: js
 */

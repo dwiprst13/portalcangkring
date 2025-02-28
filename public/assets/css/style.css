@@ -806,9 +806,6 @@ section {
 /*--------------------------------------------------------------
 # Card
 --------------------------------------------------------------*/
-.news-card {
-  height: 100%;
-}
 
 .card {
   height: 100%;
@@ -817,7 +814,14 @@ section {
   border-radius: 20px; /* Menghapus sudut bulat */
 }
 
-.card:hover {
+.news-card {
+  height: 100%;
+  border: none; /* Menghapus batas kartu */
+  box-shadow: 0px 0 16px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+  border-radius: 20px; /* Menghapus sudut bulat */
+}
+
+.news-card:hover {
   box-shadow: 0px 0 16px rgba(0, 0, 0, 0.3); /* Menambahkan bayangan */
   scale: 1.01;
   animation: scale 0.5s;
@@ -840,6 +844,7 @@ section {
   color: #aaa;
   margin-bottom: 10px;
 }
+
 .card-text {
   font-size: 0.875rem;
   overflow: hidden;
@@ -847,20 +852,96 @@ section {
   white-space: nowrap;
 }
 
+.row-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  /* Jarak antar gambar */
+  justify-content: center;
+  /* Pusatkan gambar */
+  padding: 20px;
+}
+
+.image-card {
+  flex: 1 1 calc(25% - 15px);
+  /* Maksimal 4 kolom dalam satu baris */
+  max-width: calc(25% - 15px);
+  /* Lebar maksimal 4 kolom */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-card:hover {
+  transform: scale(1.01);
+  /* Efek zoom saat hover */
+}
+
+.image-card img {
+  width: 100%;
+  /* Sesuaikan lebar */
+  height: auto;
+  max-height: 200px;
+  /* Batas tinggi gambar */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.image-card p {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #555;
+}
+
+.text-gallery {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+}
+/* Responsif untuk layar lebih kecil */
+@media (max-width: 992px) {
+  .image-card {
+    flex: 1 1 calc(33.33% - 15px);
+    /* 3 kolom */
+    max-width: calc(33.33% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .image-card {
+    flex: 1 1 calc(50% - 15px);
+    /* 2 kolom */
+    max-width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 576px) {
+  .image-card {
+    flex: 1 1 100%;
+    /* 1 kolom */
+    max-width: 100%;
+  }
+}
 
 /*--------------------------------------------------------------
-# Services
+# menu
 --------------------------------------------------------------*/
-.services {
+.menu {
   padding-bottom: 30px;
 }
 
-.services .icon-box {
+.menu .icon-box {
   margin-bottom: 20px;
   text-align: center;
 }
 
-.services .icon {
+.menu .icon {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -875,16 +956,16 @@ section {
   overflow: hidden;
 }
 
-.services .icon i {
+.menu .icon i {
   font-size: 36px;
   line-height: 0;
 }
 
-.services .icon-box:hover .icon {
+.menu .icon-box:hover .icon {
   box-shadow: 0px 0 30px rgba(46, 61, 73, 0.5);
 }
 
-.services .title {
+.menu .title {
   font-weight: 600;
   margin-bottom: 15px;
   font-size: 18px;
@@ -892,16 +973,16 @@ section {
   padding-bottom: 15px;
 }
 
-.services .title a {
+.menu .title a {
   color: #243134;
   transition: 0.3s;
 }
 
-.services .title a:hover {
+.menu .title a:hover {
   color: #243134;
 }
 
-.services .title::after {
+.menu .title::after {
   content: "";
   position: absolute;
   display: block;
@@ -912,7 +993,7 @@ section {
   left: calc(50% - 25px);
 }
 
-.services .description {
+.menu .description {
   line-height: 24px;
   font-size: 14px;
 }

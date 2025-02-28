@@ -7,7 +7,7 @@
                 <div class="card-header bg-primary">
                     <div class="row align-items-center">
                         <div class="col-6">
-                            <h5 class="card-title fw-semibold text-white">Edit Gallery</h5>
+                            <h5 class="card-title fw-semibold text-white">Edit Galeri</h5>
                         </div>
                         <div class="col-6 text-right">
                             <a href="/admin/gallery" type="button" class="btn btn-warning float-end">Kembali</a>
@@ -24,7 +24,7 @@
                                 <img src="{{ asset('storage/' . $gallery->gambar) }}"
                                     class="img-preview img-fluid mb-3 mt-2" id="preview"
                                     style="border-radius: 5px; max-height:300px; overflow:hidden;"><br>
-                                <label for="gambar" class="form-label">gambar Produk <span
+                                <label for="gambar" class="form-label">Gambar Produk <span
                                         style="color: red">*</span></label>
                                 <input class="form-control" type="file" id="gambar" name="gambar"
                                     onchange="previewImage()">

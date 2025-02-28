@@ -3,16 +3,16 @@
 @section('content')
     <section class="counts section-bg">
         <div class="section-title">
-            <h2>Gallery</h2>
+            <h2>Galeri</h2>
         </div>
         <div class="container">
-            <div class="row">
+            <div class="row-gallery">
                 @foreach ($galerrys as $gallery)
-                    <div class="col-lg-3">
+                    <div class="image-card col-lg-3">
                         <picture>
-                            <img src="{{ asset('storage/' . $gallery->gambar) }}" class="img-fluid img-thumbnail"
+                            <img src="{{ asset('storage/' . $gallery->gambar) }}" class="img-fluid"
                                 alt="Gallery" style="width: 300px; height: 200px; object-fit: cover;">
-                            <p>{{ $gallery->keterangan }}</p>
+                            <p class="text-gallery">{{ $gallery->keterangan }}</p>
                         </picture>
                     </div>
                 @endforeach

@@ -33,7 +33,7 @@
 </section><!-- End Hero -->
 
 <!-- ======= Services Section ======= -->
-<section id="services" class="services">
+<section id="menu" class="menu">
   <div class="container" data-aos="fade-up">
 
     <div class="row">
@@ -59,7 +59,7 @@
 </section>
 
 <!-- ======= Video Section ======= -->
-<section id="services" class="services mx-4">
+<section id="menu" class="menu mx-4">
   <div class="container" data-aos="fade-up">
     <div class="section-title">
       <h2>Video Profile</h2>
@@ -74,7 +74,7 @@
 </section>
 
 
-<section class="counts section-bg">
+<section class="counts">
   <div class="container">
 
     <div class="section-title">

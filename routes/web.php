@@ -10,7 +10,8 @@ use App\Http\Controllers\KontakController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\GalleryController;
-use App\Http\Controllers\LayananController;
+// use App\Http\Controllers\LayananController;
+use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\WilayahController;
 use App\Http\Controllers\AnggaranController;
@@ -20,6 +21,7 @@ use App\Http\Controllers\PetaDesaController;
 use App\Http\Controllers\VisiMisiController;
 use App\Http\Controllers\AdminPetaController;
 use App\Http\Controllers\AdminUmkmController;
+use App\Http\Controllers\AdminProgramController;
 use App\Http\Controllers\AdminAgamaController;
 use App\Http\Controllers\AdminBeritaController;
 use App\Http\Controllers\AdminKontakController;
@@ -81,7 +83,9 @@ Route::get('/umkm/{umkm:slug}', [UmkmController::class, 'detail']);
 
 Route::get('/kontak', [KontakController::class, 'index']);
 
-Route::get('/layanan', [LayananController::class, 'index']);
+// Route::get('/layanan', [LayananController::class, 'index']);
+Route::get('/program', [ProgramController::class, 'index']);
+Route::get('/program/{program:slug}', [ProgramController::class, 'detail']);
 
 Route::get('/gallery', [GalleryController::class, 'index']);
 
@@ -135,6 +139,9 @@ Route::resource('admin/penrt', AdminPenRtController::class);
 
 Route::get('/admin/umkm/slug', [AdminUmkmController::class, 'slug']);
 Route::resource('admin/umkm', AdminUmkmController::class);
+
+Route::get('/admin/program/slug', [AdminProgramController::class, 'slug']);
+Route::resource('admin/program', AdminProgramController::class);
 
 Route::get('/admin/kontak', [AdminKontakController::class, 'index']);
 Route::put('/admin/kontak/{id}', [AdminKontakController::class, 'update']);

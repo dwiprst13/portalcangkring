@@ -21,7 +21,6 @@ class BeritaController extends Controller
         $berita = Berita::where('slug', $slug)->with(['user', 'status', 'kategori', 'comments'])->first();
         $berita->views += 1;
         $berita->save();
-
         return view('berita.detail', [
             'berita'        => $berita,
             'beritaPopuler' => Berita::where('status_id', 2)->orderBy('views', 'desc')->take(5)->get(),

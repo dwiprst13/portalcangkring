@@ -7,7 +7,7 @@
                 <div class="card-header bg-primary">
                     <div class="row align-items-center">
                         <div class="col-6">
-                            <h5 class="card-title fw-semibold text-white">Tambah Gallery</h5>
+                            <h5 class="card-title fw-semibold text-white">Tambah Galeri</h5>
                         </div>
                         <div class="col-6 text-right">
                             <a href="/admin/gallery" type="button" class="btn btn-warning float-end">Kembali</a>

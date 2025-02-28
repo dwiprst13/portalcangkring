@@ -197,13 +197,12 @@
                                 <span class="hide-menu">UMKM Desa</span>
                             </a>
                         </li>
-
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="/admin/layanan " aria-expanded="false">
+                            <a class="sidebar-link" href="/admin/program " aria-expanded="false">
                                 <span>
                                     <i class="ti ti-point"></i>
                                 </span>
-                                <span class="hide-menu">Layanan</span>
+                                <span class="hide-menu">Program</span>
                             </a>
                         </li>
 
@@ -235,7 +234,6 @@
                         </li>
                     </ul>
                 </li>
-
 
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="/admin/kontak " aria-expanded="false">
