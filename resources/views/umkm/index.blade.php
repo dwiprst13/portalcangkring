@@ -17,7 +17,7 @@
                             <p class="card-text"><i class="bi bi-tag"></i>&nbsp; Rp {{ number_format($umkm->harga, 0, ',', '.') }}</p>
                         </div>
                         <a class="btn btn-success mx-3 my-1" href="https://wa.me/+62{{ $umkm->no_hp }}" role="button"><i class="bi bi-whatsapp"></i>&nbsp; Hubungi Penjual</a>
-                        <a class="btn btn-warning mx-3 mb-3" href="/umkm/{{ $umkm->slug }}" role="button"><i class="bi bi-eye"></i>&nbsp; Detail Produk</a>
+                        <a class="btn btn-primary mx-3 mb-3" href="/umkm/{{ $umkm->slug }}" role="button"><i class="bi bi-eye"></i>&nbsp; Detail Produk</a>
                     </div>
                 </div>
             </div>

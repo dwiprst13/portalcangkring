@@ -11,7 +11,7 @@
                         </div>
                         <div class="col-6 text-right">
                             <a href="/admin/gallery/create" type="button" class="btn btn-warning float-end">Tambah
-                                Gallery</a>
+                                Galeri</a>
                         </div>
                     </div>
                 </div>

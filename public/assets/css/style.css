@@ -811,14 +811,14 @@ section {
   height: 100%;
   border: none; /* Menghapus batas kartu */
   box-shadow: 0px 0 16px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
-  border-radius: 20px; /* Menghapus sudut bulat */
+  border-radius: 10px; /* Menghapus sudut bulat */
 }
 
 .news-card {
   height: 100%;
   border: none; /* Menghapus batas kartu */
   box-shadow: 0px 0 16px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
-  border-radius: 20px; /* Menghapus sudut bulat */
+  border-radius: 10px; /* Menghapus sudut bulat */
 }
 
 .news-card:hover {
@@ -830,6 +830,12 @@ section {
 .card-img-top {
   max-width: 100%;
   max-height: 200px;
+  object-fit: cover;
+}
+
+.detail-news-img {
+  max-width: 100%;
+  max-height: 450px;
   object-fit: cover;
 }
 
@@ -855,10 +861,8 @@ section {
 .row-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  /* Jarak antar gambar */
+  gap: 10px;
   justify-content: center;
-  /* Pusatkan gambar */
   padding: 20px;
 }
 
@@ -873,7 +877,7 @@ section {
   text-align: center;
   background: #fff;
   border-radius: 10px;
-  padding: 10px;
+  padding: 3px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
@@ -893,23 +897,29 @@ section {
   border-radius: 8px;
 }
 
-.image-card p {
+/* .image-card p {
   font-size: 14px;
   margin-top: 10px;
   color: #555;
-}
+} */
 
 .text-gallery {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 0px;
   font-weight: 600;
 }
 /* Responsif untuk layar lebih kecil */
 @media (max-width: 992px) {
   .image-card {
-    flex: 1 1 calc(33.33% - 15px);
+    flex: 1  calc(33.33% - 15px);
     /* 3 kolom */
     max-width: calc(33.33% - 15px);
+  }
+
+  .detail-news-img {
+    max-width: 100%;
+    max-height: 380px;
+    object-fit: cover;
   }
 }
 
@@ -919,14 +929,84 @@ section {
     /* 2 kolom */
     max-width: calc(50% - 15px);
   }
+
+.detail-news-img {
+  max-width: 100%;
+  max-height: 295px;
+  object-fit: cover;
+}
 }
 
 @media (max-width: 576px) {
-  .image-card {
-    flex: 1 1 100%;
-    /* 1 kolom */
-    max-width: 100%;
+  .row-gallery {
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* 2 kolom */
+    gap: 10px;
   }
+
+  .image-card {
+    max-width: 100%;
+    /* height: auto; */
+    flex: 1 1 auto;
+  }
+
+    .detail-news-img {
+      max-width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+    }
+}
+
+.member {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  position: relative;
+}
+
+.member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.member .pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px;
+  border: 4px solid #3498db;
+}
+
+.member .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.member-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.member-info span {
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+}
+
+/* Efek Hover untuk Nama */
+.member-info h4:hover {
+  color: #3498db;
+  transition: color 0.3s ease;
 }
 
 /*--------------------------------------------------------------

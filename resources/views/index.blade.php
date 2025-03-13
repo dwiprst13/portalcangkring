@@ -43,11 +43,11 @@
       </div>
       <div class="col-lg-3 col-md-6 icon-box" data-aos="fade-up">
         <div class="icon"><i class="bi bi-globe-asia-australia"></i></div>
-        <h4 class="title"><a href="/peta-desa">Peta Desa</a></h4>
+        <h4 class="title"><a href="/peta-desa">Peta Dusun</a></h4>
       </div>
       <div class="col-lg-3 col-md-6 icon-box" data-aos="fade-up">
         <div class="icon"><i class="bi bi-shop"></i></div>
-        <h4 class="title"><a href="/umkm">UMKM Desa</a></h4>
+        <h4 class="title"><a href="/umkm">UMKM Dusun</a></h4>
       </div>
       <div class="col-lg-3 col-md-6 icon-box" data-aos="fade-up">
         <div class="icon"><i class="bi bi-telephone-forward"></i></div>
@@ -62,7 +62,7 @@
 <section id="menu" class="menu mx-4">
   <div class="container" data-aos="fade-up">
     <div class="section-title">
-      <h2>Video Profile</h2>
+      <h2>Video Profil</h2>
     </div>
 
     <div class="row">
@@ -78,7 +78,7 @@
   <div class="container">
 
     <div class="section-title">
-      <h2>Berita Desa</h2>
+      <h2>Berita Dusun</h2>
     </div>
 
     <div class="row">

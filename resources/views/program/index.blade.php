@@ -15,7 +15,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><b>{{ $program->program }}</b></h5>
                         </div>
-                        <a class="btn btn-warning mx-3 mb-3" href="/program/{{ $program->slug }}" role="button"><i class="bi bi-eye"></i>&nbsp; Detail Program</a>
+                        <a class="btn btn-primary mx-3 mb-3" href="/program/{{ $program->slug }}" role="button"><i class="bi bi-eye"></i>&nbsp; Detail Program</a>
                     </div>
                 </div>
             </div>

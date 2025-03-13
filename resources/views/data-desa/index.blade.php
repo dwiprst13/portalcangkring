@@ -3,11 +3,6 @@
 @section('content')
 <section class="counts section-bg">
     <div class="container">
-        <div class="section-title">
-            <h2>Data Kependudukan</h2>
-        </div>
-
-        <hr>
       <div class="row my-4">
         <div class="section-title">
             <h2>Data Penduduk</h2>
@@ -213,7 +208,7 @@
     const dataPekerjaan   = {!! $jumlahPekerjaan !!};
 
     new Chart(ctxPekerjaan, {
-        type: 'polarArea',
+        type: 'bar',
         data: {
             labels: labelPekerjaan,
             datasets: [{
@@ -233,49 +228,56 @@
 </script>
 
 
-  <script>
-    const ctxAgama = document.getElementById('agamaChart');
-    
-    const labels = {!! $labels !!};
-    const dataPenganut = {!! $dataPenganut !!};
-    
-    new Chart(ctxAgama, {
-      type: 'bar',
-      data: {
-        labels: labels,
-        datasets: [{
-          label: 'Penganut Agama',
-          data: dataPenganut,
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(255, 159, 64, 0.2)',
-            'rgba(255, 205, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(201, 203, 207, 0.2)'
-          ],
-          borderColor: [
-            'rgb(255, 99, 132)',
-            'rgb(255, 159, 64)',
-            'rgb(255, 205, 86)',
-            'rgb(75, 192, 192)',
-            'rgb(54, 162, 235)',
-            'rgb(153, 102, 255)',
-            'rgb(201, 203, 207)'
-          ],
-          borderWidth: 1
-        }]
+<script>
+  const ctxAgama = document.getElementById('agamaChart');
+
+  const labels = {!! $labels !!}; // Pastikan ini array label (misalnya: ['Islam', 'Katolik', 'Protestan'])
+  const dataPenganut = {!! $dataPenganut !!}; // Pastikan ini array dengan jumlah sama seperti labels
+
+  new Chart(ctxAgama, {
+    type: 'bar',
+    data: {
+      labels: labels, // Label kategori untuk sumbu X
+      datasets: [{
+        label: 'Jumlah Penganut', // Label untuk legend dan tooltip
+        data: dataPenganut, // Data yang sesuai dengan labels
+        backgroundColor: [
+          '#FF5733', // Oranye kemerahan
+          '#8E44AD', // Ungu tua
+          '#2ECC71', // Hijau segar
+          '#F1C40F', // Kuning emas
+          '#3498DB', // Biru muda
+          '#E74C3C'  // Merah menyala (Tambahan)
+        ],
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: true, // Menampilkan legend
+          position: 'top'
+        }
       },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Jumlah Penganut' // Label sumbu Y
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Agama' // Label sumbu X
           }
         }
       }
-    });
-  </script>
+    }
+  });
+</script>
+
   
   <script>
     const ctxJenisKelamin = document.getElementById('jenisKelaminChart');
@@ -314,11 +316,7 @@
                     label: 'Jumlah Penduduk Per RT',
                     data: dataPenRt,
                     backgroundColor: [
-                        'rgb(255, 99, 132)',
-                        'rgb(75, 192, 192)',
-                        'rgb(255, 205, 86)',
-                        'rgb(201, 203, 207)',
-                        'rgb(54, 162, 235)'
+                        'rgb(54, 162, 235)',
                     ],
                     hoverOffset: 4
                 }]

@@ -57,7 +57,7 @@
                         <span class="d-flex">
                             <i class="ti ti-world-upload"></i>
                         </span>
-                        <span class="hide-menu">Profil Desa</span>
+                        <span class="hide-menu">Profil Dusun</span>
                     </a>
                     <ul aria-expanded="false" class="collapse first-level">
                         <li class="sidebar-item">
@@ -89,7 +89,7 @@
                                 <div class="round-16 d-flex align-items-center justify-content-center">
                                     <i class="ti ti-point"></i>
                                 </div>
-                                <span class="hide-menu">Perangkat Desa</span>
+                                <span class="hide-menu">Perangkat Dusun</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
@@ -97,7 +97,7 @@
                                 <div class="round-16 d-flex align-items-center justify-content-center">
                                     <i class="ti ti-point"></i>
                                 </div>
-                                <span class="hide-menu">Peta Desa</span>
+                                <span class="hide-menu">Peta Dusun</span>
                             </a>
                         </li>
                     </ul>
@@ -224,14 +224,14 @@
                             </a>
                         </li>
 
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="/admin/apbdes " aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-point"></i>
-                                </span>
-                                <span class="hide-menu">ApbDES</span>
-                            </a>
-                        </li>
+                        <!--<li class="sidebar-item">-->
+                        <!--    <a class="sidebar-link" href="/admin/apbdes " aria-expanded="false">-->
+                        <!--        <span>-->
+                        <!--            <i class="ti ti-point"></i>-->
+                        <!--        </span>-->
+                        <!--        <span class="hide-menu">ApbDES</span>-->
+                        <!--    </a>-->
+                        <!--</li>-->
                     </ul>
                 </li>
 

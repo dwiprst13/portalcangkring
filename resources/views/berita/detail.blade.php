@@ -18,7 +18,7 @@
                                     <span><i class="bi bi-fire">Dibaca {{ $berita->views }} Kali</i></span>
                                 </div>
 
-                                <img src="{{ asset('storage/' . $berita->gambar) }}" alt="Gambar Andalan" class="img-fluid rounded mb-5" style="height: 450px; width: 100%;">
+                                <img src="{{ asset('storage/' . $berita->gambar) }}" alt="Gambar Andalan" class="img-fluid rounded mb-5 detail-news-img" style="height: 450px; width: 100%;">
                                 <p>{!! $berita->body !!}</p>
 
                                 <i class="bi bi-tags"></i> <a href="#" type="button" class="btn btn-secondary btn-sm my-2">{{ $berita->kategori->kategori }}</a>
@@ -145,17 +145,15 @@
                 <div class="sidebar">
                     <div class="card">
                         <div class="card-body">
-                            <h4>Berita Populer</h4>
-                            <div class="populer-post mb-5">
+                            <h4 style="font-weight: 600;">Berita Populer</h4>
+                            <div class="populer-post">
                                 @foreach ($beritaPopuler as $berita)
-                                    <div class="row mt-3">
-                                        <div class="col-md-5">
-                                            <img src="{{ asset('storage/' . $berita->gambar) }}" width="100%" height="100%" style="border-radius: 5px">
-                                        </div>
-                                        <div class="col-md-7 mt-2">
+                                    <div class="row mt-1">
+                                        <div class="">
                                             <a href="/berita/{{ $berita->slug }}" style="color: inherit;"><h6>{{ $berita->judul }}</h6></a>
                                         </div>
                                     </div>
+                                    <hr>
                                 @endforeach
                             </div>
                         </div>
@@ -163,7 +161,7 @@
 
                     <div class="card my-3">
                         <div class="card-body">
-                            <h4>Kategori</h4>
+                            <h4 style="font-weight: 600;">Kategori</h4>
                             <div class="populer-post mb-5">
                                 <div class="row mt-3">
                                     <div class="col">

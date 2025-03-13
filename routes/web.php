@@ -44,6 +44,9 @@ use App\Http\Controllers\AdminJenisKelaminController;
 use App\Http\Controllers\AdminVideoProfileController;
 use App\Http\Controllers\AdminPerangkatDesaController;
 use App\Http\Controllers\AdminIdentitasSitusController;
+use Laravel\Socialite\Facades\Socialite;
+use App\Models\User;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -165,3 +168,23 @@ Route::resource('/admin/pengumuman', AdminAnnouncementController::class);
 
 Route::get('/admin/apbdes', [AdminAnggaranController::class, 'slug']);
 Route::resource('/admin/apbdes', AdminAnggaranController::class);
+
+Route::get('/auth/google', function () {
+    return Socialite::driver('google')->redirect();
+});
+
+Route::get('/auth/google/callback', function () {
+    $googleUser = Socialite::driver('google')->user();
+
+    $user = User::updateOrCreate([
+        'email' => $googleUser->getEmail(),
+    ], [
+        'name' => $googleUser->getName(),
+        'google_id' => $googleUser->getId(),
+        'avatar' => $googleUser->getAvatar(),
+    ]);
+
+    Auth::login($user);
+
+    return redirect('/home');
+});
